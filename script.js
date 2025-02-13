@@ -39,13 +39,16 @@ console.log(`?: ${yearCheck}`);
 
 // function takes an array as parameter. give me the average of the odd number in the array
 function oddAverage(numbers) {
-   let sum=0
+  let oddArray = []
+  let sum = 0;
    for (const number of numbers) {
      if (number % 2 === 1) {
+       oddArray.push(number);
        sum += number;
     }
    }
-  return sum;
+  let average = sum / oddArray.length;
+  return parseInt(average);
  }
 
 let arrayOfNumber = [2, 4, 6, 7, 8, 11, 33, 44, 55, 76, 343]
